@@ -1,0 +1,29 @@
+{
+    "Name": "Best Songs Ever",
+    "Songs": [
+        {
+            "length": "4:27",
+            "artist": "Bon Jovi",
+            "title": "It's My Life",
+            "album": "Crush"
+        },
+        {
+            "length": "3:06",
+            "artist": "Linkin Park",
+            "title": "Numb",
+            "album": "Meteora"
+        },
+        {
+            "length": "3:24",
+            "artist": "Linkin Park",
+            "title": "Leave Out All the Rest",
+            "album": " Minutes to Midnight"
+        },
+        {
+            "length": "5:21",
+            "artist": "Red Hot Chili Peppers",
+            "title": "Californication",
+            "album": "Californication"
+        }
+    ]
+}
