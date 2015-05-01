@@ -5,7 +5,7 @@ from crawl import CrawlBgWeb
 
 class Chart:
 
-    def make_chart(self):
+    def draw_chart(self):
         crawl = CrawlBgWeb()
         dict_histogram = crawl.load_histogram("servers.json")
         labels = []
@@ -14,8 +14,8 @@ class Chart:
             labels.append(servers)
             sizes.append(dict_histogram[servers])
 
-        colors = ['yellow', 'pink', 'red', 'green']
-        explode = (0.1, 0.1, 0.1, 0.1)
+        colors = ['yellow', 'pink', 'red', 'green','blue']
+        explode = (0.1, 0.1, 0.1, 0.1, 0.1)
 
         plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f%%', shadow=True, startangle=90)
@@ -23,5 +23,6 @@ class Chart:
         plt.axis('equal')
 
         plt.show()
+
 
 

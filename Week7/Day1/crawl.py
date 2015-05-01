@@ -27,13 +27,13 @@ class CrawlBgWeb:
     def get_headers(self):
 
         all_links = self.parse_html()
-        server_names = ["Apache", "nginx", "OpenSSL", "Microsoft-IIS"]
+        server_names = ["Apache", "nginx", "Zeus", "Microsoft-IIS"]
         histogram = Histogram()
 
         for link in all_links:
             try:
                 if link is not None and "link.php?id=" in link:
-                    req = requests.head(self.url + link, timeout=2, allow_redirects=True)
+                    req = requests.head(self.url + link, timeout=3, allow_redirects=True)
                     get_server = req.headers["Server"]
                     print(get_server)
                     for servers in server_names:
@@ -49,14 +49,14 @@ class CrawlBgWeb:
                continue
         return histogram
 
-
-    def save_histogram(self, histogram):
+    @staticmethod
+    def save_histogram(histogram):
 
             with open("servers.json", "w") as f:
                 json.dump(histogram, f, indent=4)
 
-
-    def load_histogram(self,filename):
+    @staticmethod
+    def load_histogram(filename):
 
         with open(filename, "r") as f:
             data = json.loads(f.read())

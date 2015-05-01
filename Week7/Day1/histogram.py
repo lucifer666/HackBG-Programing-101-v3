@@ -19,20 +19,3 @@ class Histogram:
        for server in self.list_servers:
             self.dict_servers[server] = self.count(server)
        return self.dict_servers
-"""
-def main():
-    h = Histogram()
-    h.add("Apache")
-    h.add("Apache")
-    h.add("nginx")
-    h.add("IIS")
-    h.add("nginx")
-    print(h.count("Apache"))
-    print(h.count("nginx"))
-    print(h.count("IIS"))
-    print(h.count("IBM Web Server"))
-    #print(h.get_dict())
-
-    if __name__ == "__main__":
-    main()
-"""

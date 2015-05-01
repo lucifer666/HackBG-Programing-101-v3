@@ -1,6 +1,7 @@
 {
-    "Microsoft-IIS": 137,
-    "Apache": 1384,
-    "nginx": 163,
-    "other servers": 51
+    "Microsoft-IIS": 143,
+    "other servers": 44,
+    "nginx": 166,
+    "Apache": 1425,
+    "Zeus": 8
 }
