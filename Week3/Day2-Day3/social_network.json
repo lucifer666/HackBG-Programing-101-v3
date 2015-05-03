@@ -1,0 +1,44 @@
+{
+ "Spindi": [
+  "Meco Pug"
+ ],
+ "Emo": [
+  "Natalia",
+  "Martina",
+  "Ganio"
+ ],
+ "Meco Pug": [
+  "Spindi"
+ ],
+ "Ivo": [
+  "Rado",
+  "Fil",
+  "Bambi"
+ ],
+ "Rado": [
+  "Ivo",
+  "Metodi"
+ ],
+ "Martina": [
+  "Emo"
+ ],
+ "Bambi": [
+  "Ivo"
+ ],
+ "Fil": [
+  "Ivo",
+  "Ganio"
+ ],
+ "Ganio": [
+  "Metodi",
+  "Fil",
+  "Emo"
+ ],
+ "Metodi": [
+  "Rado",
+  "Ganio"
+ ],
+ "Natalia": [
+  "Emo"
+ ]
+}
