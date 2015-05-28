@@ -7,9 +7,9 @@ def main():
         database = Database()
         filldatabase = FillDatabase()
         info = ShowInfo()
-        database.create_database()
-        filldatabase.fill_students_courses()
-        filldatabase.fill_third_table()
+        #database.create_database()
+        #filldatabase.fill_students_courses()
+        #filldatabase.fill_third_table()
         while True:
             print("\nIf you want to see:\n"
                   "1.All students with their GitHub accounts: press 1\n"

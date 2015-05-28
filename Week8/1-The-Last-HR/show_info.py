@@ -6,7 +6,7 @@ class ShowInfo:
 
 
     def __init__(self):
-        self.db = sqlite3.connect('/home/filip/exercisesHack/Week8.Day1/student_and_courses.db')
+        self.db = sqlite3.connect('student_and_courses.db')
         self.cursor = self.db.cursor()
 
     def student_with_git(self):
@@ -24,5 +24,16 @@ class ShowInfo:
         return result
 
     def students_with_the_most_courses(self):
-        result = self.cursor.execute("")
+
+        result = self.cursor.execute("SELECT students.student_name, COUNT(courses_with_students.student_id)\
+                                      FROM students JOIN courses_with_students\
+                                      ON students.student_id = courses_with_students.student_id\
+                                      WHERE students.student_id IN (\
+                                      SELECT student_id\
+                                      FROM courses_with_students\
+                                      GROUP BY student_id\
+                                      ORDER BY COUNT(*) DESC\
+                                      LIMIT 1)")
         return result
+
+
